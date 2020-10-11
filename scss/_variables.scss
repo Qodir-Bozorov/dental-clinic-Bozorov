@@ -1,0 +1,9 @@
+//////////Colors
+$text-color: #0B132A;
+$text-secondary-color: #4F5665;
+$main-color: #0055B8;
+$secondary-color: #FFD600;
+/////Transitions
+$delay: 300ms ease;
+$main-smoothing: color $delay, background-color $delay, box-shadow $delay, transform $delay, opacity $delay, backdrop-filter $delay;
+$action-smoothing: background-color $delay, transform 400ms ease, opacity $delay;
