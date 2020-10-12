@@ -142,5 +142,9 @@
   padding-top: 24px;
   padding-bottom: 24px;
   border: 1px solid $secondary-color;
+  &:hover {
+   color: $main-color;
+   background-color: $secondary-color;
+  }
  }
 }
