@@ -8,8 +8,81 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body id="body">
-   
+<body id="body" class="container--wide">
+    <header class="site-header">
+        <div class="container site-header__container">
+            <a href="tel:990545606" class="site-header__phone-us">
+                <div class="phone-us__contents"><span class="phone-us__title">Contact us</span><span
+                        class="phone-us__number">+7(342)216-22-27</span></div>
+            </a>
+            <a href="index.html" class="site-header__logo-link"><img src="img/logo-with-title.svg" alt="logo D P"
+                    class="site-header__logo-img" width="103" height="56"></a>
+            <div class="site-header__work-time">
+                <div class="work-time__contents"><span class="site-header__current-stats">Open now</span><span
+                        class="site-header__todays-worktime">Today we work until 19.00</span></div>
+            </div>
+        </div>
+        <nav class="site-header__nav sitenav">
+            <div class="container sitenav__container">
+                <div class="sitenav__content-wrapper">
+                    <a href="index.html" class="sitenav__logo-link"><img src="img/title-logo.svg" alt="Logo dp"
+                            class="sitenav__logo-img" width="140" height="21"></a>
+                    <ul class="sitenav__list nav-list">
+                        <li class="nav__item"><a href="#services" class="nav__item-link">Services</a></li>
+                        <li class="nav__item"><a href="#advantages" class="nav__item-link">Advantages</a></li>
+                        <li class="nav__item"><a href="#team" class="nav__item-link">Team</a></li>
+                        <li class="nav__item"><a href="#reviews" class="nav__item-link">Reviews</a></li>
+                        <li class="nav__item"><a href="#contacts" class="nav__item-link">Contacts</a></li>
+                    </ul>
+                    <div class="nav__soc-media">
+                        <a href="#" target="_blank" class="soc-media__item vkontacte"
+                            aria-label="us vkontacte social page">
+                            <img src="img/vk.svg" width="28" height="28" alt="vkontacte" aria-hidden="true"
+                                class="soc-media__icon vk">
+                        </a>
+                        <a href="#" target="_blank" class="soc-media__item instagram"
+                            aria-label="us instagram social page"><img src="img/instagram.svg" width="16" height="16"
+                                alt="instagram" aria-hidden="true" class="soc-media__icon inst">
+                        </a>
+                        <a href="#" target="_blank" class="soc-media__item instagram"
+                            aria-label="us twitter social page"><img src="img/twitter.svg" width="12" height="12"
+                                alt="twitter" aria-hidden="true" class="soc-media__icon tw"></a>
+                    </div>
+                    <button type="button" class="navlist__toggler"></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="site-main">
+        <section class="intro">
+            <div class="container intro__container">
+                <div class="intro__txt-wrapper">
+                    <h2 class="intro__heading" aria-label="get a brilliant smile 
+                    for every day">get a brilliant smile for every day</h2>
+                    <p class="intro__title">Modern technology and expert-class dentists</p>
+                    <a href="#" class="intro__button primary-button">Get</a>
+                    <div class="intro-slider__buttons">
+                        <button type="button" class="intro-slider__prev-button intro-slider__button"></button>
+                        <button type="button" class="intro-slider__next-button intro-slider__button"></button>
+                    </div>
+                </div>
+                <ul class="intro__slider">
+                    <li class="intro-slider__item">
+                        <picture>
+                            <img class="slider__img" src="img/smile-lady.jpg"
+                                srcset="img/smile-lady.jpg 1x, img/smile-lady@2x.jpg 2x" alt="Smiling girl">
+                        </picture>
+                    </li>
+                    <li class="intro-slider__item">
+                        <picture>
+                            <img class="slider__img" src="img/smile-lady.jpg"
+                                srcset="img/smile-lady.jpg 1x, img/smile-lady@2x.jpg 2x" alt="Smiling girl">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
     <script src="js/main.js"></script>
 </body>
 

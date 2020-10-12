@@ -1,0 +1,39 @@
+.primary-button {
+ //for links
+ @include restyle-link($white, none, $white, none) min-width: 265px;
+ padding: 24px 70px;
+ text-align: center;
+ background-color: $main-color;
+ border-radius: 5px;
+ font-size: 18px;
+ line-height: 21px;
+ text-transform: uppercase;
+}
+
+.intro-slider__button {
+ border: none;
+ background: none;
+ outline: none;
+ background-color: $secondary-color;
+ border-radius: 5px;
+ cursor: pointer;
+ &:hover {
+  opacity: 0.8;
+ }
+ &:active {
+  opacity: 0.6;
+ }
+}
+
+.intro-slider__next-button {
+ width: 70px;
+ height: 70px;
+ @include pseudo-bg (url(../../img/arrow-right-lined.svg), 23px, center, center);
+}
+
+.intro-slider__prev-button {
+ width: 42px;
+ height: 70px;
+ @include pseudo-bg (url(../../img/Arrow-left-no-lined.svg), 13px, center, center);
+ margin-right: 10px;
+}

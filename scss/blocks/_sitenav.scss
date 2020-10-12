@@ -1,0 +1,146 @@
+.sitenav__content-wrapper {
+ padding: 0;
+ background-color: $main-color;
+ @include d-flex(row, center, space-between);
+ padding: 20px 30px;
+ border-radius: 5px;
+ margin-bottom: -30px;
+ position: relative;
+ z-index: 3;
+}
+
+.sitenav__logo-link {
+ display: none;
+}
+
+.nav-list {
+ @include d-flex(row, center, space-between);
+ @include reset-list;
+ margin-right: 20px;
+ margin-left: 20px;
+ transition: $main-smoothing;
+}
+
+.navlist__toggler {
+ display: none;
+ border: none;
+ background: none;
+ outline: none;
+ width: 25px;
+ height: 18px;
+ @include pseudo-bg(url(../img/gamburger.svg), contain, center, center);
+}
+
+.navlist__toggler--open {
+ background-image: url(../img/exit.svg);
+}
+
+.nav-list--open {
+ @include d-flex(row, center, space-between);
+ @include reset-list;
+ position: fixed;
+ top: 58px;
+ left: 0px;
+ z-index: 0;
+ flex-direction: column;
+ background-color: $main-color;
+ width: 100%;
+ // transform: translateX(100%) translateY(-100%);
+ transition: $main-smoothing;
+ transform: translateY(0);
+}
+
+.nav__item {
+ margin-right: 35px;
+}
+
+.nav__item-link {
+ @include restyle-link($white, none, $secondary-color, none);
+ font-size: 18px;
+ line-height: 21px;
+ transition: $main-smoothing;
+}
+
+.nav__soc-media {
+ display: flex;
+ flex-shrink: 0;
+}
+
+.soc-media__item {
+ display: flex;
+ flex-shrink: o;
+ margin-left: 12px;
+ transition: $main-smoothing;
+ &:hover {
+  opacity: 0.8;
+  transform: rotate(360deg);
+ }
+ &:active {
+  opacity: 0.6;
+ }
+}
+
+@include breakpoint-down(1024px) {
+ .sitenav__container {
+  padding: 0;
+ }
+ .sitenav__content-wrapper {
+  border-radius: 0;
+  margin-bottom: 0;
+ }
+ .sitenav__logo-link {
+  display: flex;
+  flex-shrink: 0;
+ }
+}
+
+@include breakpoint-down(875px) {
+ .nav__item-link {
+  font-size: 15px;
+ }
+ .nav__item {
+  margin-right: 20px;
+ }
+ .nav__item:last-child {
+  margin-right: 0;
+ }
+}
+@include breakpoint-down(710px) {
+ .nav__soc-media {
+  display: none;
+ }
+}
+@include breakpoint-down(710px) {
+ .navlist__toggler {
+  display: block;
+ }
+ .nav-list {
+  position: fixed;
+  top: 56px;
+  left: -20px;
+  z-index: -3;
+  flex-direction: column;
+  background-color: $main-color;
+  width: 100%;
+  transform: translateY(-190%);
+ }
+
+ .nav__item {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  // padding-top: 24px;
+  // padding-bottom: 24px;
+ }
+ .nav__item-link {
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border: 1px solid $secondary-color;
+ }
+}

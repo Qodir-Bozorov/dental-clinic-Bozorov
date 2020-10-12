@@ -1,14 +1,16 @@
-const hamburger = document.querySelector(".sitenav__toggler");
-const navmenu = document.querySelector(".sitenav__list");
-const body = document.querySelector(".site-main");
+const hamburger = document.querySelector(".navlist__toggler");
+const navmenu = document.querySelector(".nav-list");
+// const body = document.querySelector(".site-main");
 
 
 hamburger.addEventListener("click", () => {
- navmenu.classList.toggle("open");
- navmenu.classList.toggle("sitenav__list--open");
+ // navmenu.classList.toggle("open");
+ navmenu.classList.toggle("nav-list");
+ navmenu.classList.toggle("nav-list--open");
+ hamburger.classList.toggle("navlist__toggler--open");
 })
 
 
-body.addEventListener("click", () => {
- navmenu.classList.remove("sitenav__list--open")
-})
+// body.addEventListener("click", () => {
+//  navmenu.classList.remove("nav-list--open");
+// })

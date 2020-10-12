@@ -1,0 +1,98 @@
+.site-header {
+ background-color: #fff;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 2;
+ width: 100%;
+}
+
+.site-header__container {
+ @include d-flex(row, center, space-between);
+ background-color: #fff;
+ padding-top: 12px;
+ position: relative;
+ margin-bottom: 34px;
+}
+
+.site-header__logo-link {
+ position: absolute;
+ left: 50%;
+ top: 12px;
+ transform: translateX(-50%);
+ &:hover {
+  opacity: 0.8;
+ }
+ &:active {
+  opacity: 0.6;
+ }
+}
+
+.site-header__phone-us {
+ @include d-flex(row, center, start);
+ @include restyle-link($text-color, none, $text-color, none);
+ font-size: 14px;
+ line-height: 16px;
+ &:hover {
+  opacity: 0.8;
+ }
+ &:active {
+  opacity: 0.6;
+ }
+ &::before {
+  content: "";
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  margin-right: 7px;
+  @include pseudo-bg(url(../img/phone.svg), cover, center, center) background-repeat: no-repeat;
+ }
+}
+.phone-us__contents {
+ @include d-flex(column, start, start);
+}
+.phone-us__title {
+ font-weight: 500;
+ margin-bottom: 3px;
+}
+.phone-us__number {
+ font-weight: 300;
+}
+
+.site-header__work-time {
+ @include d-flex(row, center, start);
+ color: $text-color;
+ &::before {
+  display: inline-block;
+  content: "";
+  width: 29px;
+  height: 29px;
+  @include pseudo-bg(url(../img/clock.svg), cover, center, center);
+  margin-right: 7px;
+  background-repeat: no-repeat;
+ }
+}
+
+.work-time__contents {
+ @include d-flex(column, start, start);
+}
+
+.site-header__current-stats {
+ font-weight: 500;
+ font-size: 14px;
+ line-height: 16px;
+ color: #00b007;
+ margin-bottom: 3px;
+}
+
+.site-header__todays-worktime {
+ font-weight: 300;
+ font-size: 14px;
+ line-height: 16px;
+}
+
+@include breakpoint-down(1024px) {
+ .site-header__container {
+  display: none;
+ }
+}
