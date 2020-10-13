@@ -1,0 +1,119 @@
+.our-experts__container {
+ display: flex;
+ margin-bottom: 70px;
+
+}
+
+.our-experts__img {
+ object-fit: contain;
+ margin-left: -15%;
+ margin-right: 40px;
+}
+
+.our-experts__img {
+ height: auto;
+ object-fit: cover;
+}
+.our-experts__text-wrapper {
+ max-width: 580px;
+ color: $text-color;
+ margin-left: auto;
+ @include pseudo-bg(url(../../img/dp-logo-highlight.png), 275px 100px, top ,left);
+}
+.our-experts__heading {
+ margin: 0;
+ padding: 0;
+ font-weight: 500;
+ font-size: 36px;
+ line-height: 42px;
+ margin-bottom: 12px;
+}
+
+.our-experts__description {
+ margin: 0;
+ padding: 0;
+ font-weight: 300;
+ font-size: 18px;
+ line-height: 25px;
+ margin-bottom: 30px;
+}
+
+.our-experts__work-steps-list,
+.our-experts__work-steps-list * {
+ @include reset-list;
+}
+
+.worksteps__item {
+ display: flex;
+ margin-bottom: 20px;
+ &::before {
+  display: inline-block;
+  content: "";
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  margin-right: 30px;
+ }
+}
+
+.expert-class::before {
+ @include pseudo-bg(url(../../img/expert-man.png), cover, center, center);
+}
+.modern-technology::before {
+ @include pseudo-bg(url(../../img/tooth-with-parma-blue.png), cover, center, center);
+}
+.location::before {
+ @include pseudo-bg(url(../../img/loacation.png), cover, center, center);
+}
+
+.workstep__heading {
+ font-weight: bold;
+ font-size: 18px;
+ line-height: 21px;
+ margin-bottom: 5px;
+}
+
+.workstep__title {
+ font-weight: 300;
+ font-size: 14px;
+ line-height: 20px;
+ color: $text-secondary-color;
+}
+
+@include breakpoint-down(900px) {
+ .our-experts__img {
+  margin-left: -20%;
+ }
+ .workstep__title {
+  display: none;
+ }
+ .worksteps__item {
+  align-items: center;
+ }
+}
+
+.left {
+ margin: 0;
+ margin-bottom: 16px;
+}
+
+@include breakpoint-down (840px) {
+ .our-experts__container {
+  flex-direction: column;
+ }
+ .our-experts__img {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 30px;
+ }
+ .our-experts__text-wrapper {
+  margin: 0;
+  max-width: 100%;
+ }
+ .our-experts__work-steps-list {
+  text-align: center;
+  max-width: 265px;
+  margin-right: auto;
+  margin-left: auto;
+ }
+}

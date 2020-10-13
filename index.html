@@ -57,15 +57,16 @@
         <section class="intro">
             <div class="container intro__container">
                 <div class="intro__txt-wrapper">
-                    <h2 class="intro__heading" aria-label="get a brilliant smile 
-                    for every day">get a brilliant smile for every day</h2>
+                    <h2 class="intro__heading">get a brilliant smile for every day</h2>
                     <p class="intro__title">Modern technology and expert-class dentists</p>
                     <a href="#" class="intro__button primary-button">Get</a>
-    
+
                 </div>
                 <div class="intro-slider__buttons">
-                    <button type="button" class="intro-slider__prev-button intro-slider__button"></button>
-                    <button type="button" class="intro-slider__next-button intro-slider__button"></button>
+                    <button type="button"
+                        class="intro-slider__prev-button intro-slider__button secondary-button"></button>
+                    <button type="button"
+                        class="intro-slider__next-button intro-slider__button secondary-button"></button>
                 </div>
                 <ul class="intro__slider">
                     <li class="intro-slider__item">
@@ -77,10 +78,196 @@
                     <li class="intro-slider__item">
                         <picture>
                             <img class="slider__img" src="img/smile-lady.jpg"
-                                srcset="img/smile-lady.jpg 1x, img/smile-lady@2x.jpg 2x" alt="Smiling girl">
+                                srcset="img/smile-lady.jpg 1x, img/smile-lady@2x.jpg 2x" alt="Smiling girl" width="1920"
+                                height="900">
                         </picture>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="appointment">
+            <div class="container appointmant__container">
+                <div class="appointment__shortest-informations">
+                    <div class="appointment__shortinfo--first shortinfo-card">
+                        <span class="short-info__title">Treatment</span>
+                        <p class="short-info__description">All types of dental treatment are carried out using the most
+                            modern technologies.</p>
+                    </div>
+                    <div class="appointment__shortinfo--second shortinfo-card">
+                        <span class="short-info__title">Prosthetics</span>
+                        <p class="short-info__description">We will help you find the most convenient and aesthetically
+                            attractive version of the prosthesis.</p>
+                    </div>
+                </div>
+                <form action="https://echo.htmlacademy.ru" class="appointmant__form" method="POST">
+                    <h4 class="appointmant-form__heading">Appointment</h4>
+                    <input type="text" name="username" id="userName" class="form__username input-txts"
+                        placeholder="Name" required>
+                    <input type="email" name="usermail" id="userMail" class="form__usermail input-txts"
+                        placeholder="Email" required>
+                    <button type="submit" aria-label="submit answer"
+                        class="form__submit-button secondary-button">Appointment</button>
+                    <label class="checkbox-wrapper">
+                        <small class="checkbox-title">I give my consent to the storage and processing of personal
+                            data</small>
+                        <input type="checkbox" name="personal-data" class="default-checkbox visually-hidden">
+                        <span class="checkbox-restyle"></span>
+                    </label>
+                </form>
+            </div>
+        </section>
+
+        <section class="services">
+            <!-- ----------------------- -->
+            <hr class="diveder">
+            <!-- ----------------------- -->
+            <div class="container services__container">
+                <div class="services__txt-wrapper">
+                    <h2 class="services__heading section-heading">Services</h2>
+                    <p class="services__description">We provide a wide range of services from treatment to prosthetics.
+                        Therefore, you do not need to go anywhere else.</p>
+                </div>
+                <div class="services__slider-wrapper slider-wrapper">
+                    <ul class="services-slider__list slider__list">
+                        <li class="services-slider__item">
+                            <div href="#" class="slider__card treatment">
+                                <h4 class="slider__heading">Dental treatment</h4>
+                                <span class="slider-heading__divider"></span>
+                                <span class="slider__prices">
+                                    <del class="old-price">5000₽</del>
+                                    <b class="current-price">3100₽</b>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="services-slider__item">
+                            <div href="#" class="slider__card hygiene">
+                                <h4 class="slider__heading">Hygiene</h4>
+                                <span class="slider-heading__divider"></span>
+                                <span class="slider__prices">
+                                    <del class="old-price">6000₽</del>
+                                    <b class="current-price">4500₽</b>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="services-slider__item">
+                            <div href="#" class="slider__card diagnostics">
+                                <h4 class="slider__heading">Diagnostics</h4>
+                                <span class="slider-heading__divider"></span>
+                                <span class="slider__prices">
+                                    <del class="old-price">1000₽</del>
+                                    <b class="current-price">FREE</b>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="services-slider__item">
+                            <div href="#" class="slider__card childrens-dentistry">
+                                <h4 class="slider__heading">Children’s dentistry</h4>
+                                <span class="slider-heading__divider"></span>
+                                <span class="slider__prices">
+                                    <del class="old-price">5000₽</del>
+                                    <b class="current-price">3100₽</b>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="services-slider__item">
+                            <div href="#" class="slider__card hygiene">
+                                <h4 class="slider__heading">Hygiene</h4>
+                                <span class="slider-heading__divider"></span>
+                                <span class="slider__prices">
+                                    <del class="old-price">6000₽</del>
+                                    <b class="current-price">4500₽</b>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="services__slider-buttons-wrapper">
+                        <button class="services__slider-button services__slider-button--prev"></button>
+                        <button class="services__slider-button services__slider-button--next"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-experts">
+            <div class="container our-experts__container">
+                    <img src="img/doctor-with-girl-see-prosthetics.jpg" class="our-experts__img" alt="doctor with girl see prosthetics" width="641" height="110">
+                <div class="our-experts__text-wrapper">
+                    <hr class="diveder left">
+                    <h3 class="our-experts__heading">Modern technology and
+                        expert-class dentists</h3>
+                    <p class="our-experts__description">Even the best doctor is not able to “squeeze” out of technology
+                        more than the potential that manufacturers have laid in it. This primarily relates to medical
+                        equipment and instruments.
+                        Therefore, the better equipped the dental clinic is, the better, safer and faster the work is
+                        done.
+                        We do not consider it possible to save on technology and tools. Everything that is worthy of the
+                        attention of professional dentists is already with us.</p>
+                    <ol class="our-experts__work-steps-list">
+                        <li class="worksteps__item  expert-class">
+                            <div class="item__text-wrapper">
+                                <h5 class="workstep__heading">Expert-class dentists</h5>
+                                <p class="workstep__title">All 13 dentists of our center are highly qualified
+                                    specialists with extensive experience; each of them is sincerely interested in
+                                    further improving their professionalism.</p>
+                            </div>
+                        </li>
+                        <li class="worksteps__item modern-technology">
+                            <div class="item__text-wrapper">
+                                <h5 class="workstep__heading">Modern technology</h5>
+                                <p class="workstep__title">We believe that the better equipped a dental clinic is, the
+                                    better, safer and faster the work is done.
+                                    We do not consider it possible to save on technology and tools. Everything that is
+                                    worthy of the attention of professional dentists is already with us.</p>
+                            </div>
+                        </li>
+                        <li class="worksteps__item location">
+                            <div class="item__text-wrapper">
+                                <h5 class="workstep__heading">Convenient location and working hours</h5>
+                                <p class="workstep__title">Our clinic is located in the center of the Sverdlovsk region,
+                                    at:
+                                    Street Raboche-Krestyanskaya 6.
+                                    From the hypermarket “Semya”
+                                    to our clinic - 5 minutes on foot.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+        </section>
+        <hr class="diveder">
+        <section class="pros">
+            <div class="container pros__container">
+                <div class="pros__text-wrapper">
+                    <h3 class="pros__heading">Professional team</h3>
+                    <p class="pros__title">Dental Practice employs orthodontists and orthopedists, surgeons and therapists, as well as children's dentists.
+                        All 13 dentists of our center are highly qualified specialists with extensive experience.</p>
+                </div>
+                <div class="pros__slider-wrapper slider-wrapper">
+                    <ul class="pros__slider-list slider__list">
+                        <li class="pros__slider-item slider__item">
+                            <b class="pros__name">Anna Petrova</b>
+                            <p class="pros__profession">Expert-class dentist</p>
+                            <img class="pros__img" src="img/anna-petrova.jpg" alt="Anna Petrova" class="slider-item__img" srcset="img/anna-petrova.jpg 1x, img/anna-petrova@2x.jpg 2x" width="300" height="350px">
+                        </li>
+                        <li class="pros__slider-item slider__item">
+                            <b class="pros__name">Ivan Ivanov</b>
+                            <p class="pros__profession">Expert-class dentist</p>
+                            <img class="pros__img" src="img/ivan-ivanov.jpg" alt="Ivan Ivanov" class="slider-item__img" srcset="img/ivan-ivanov.jpg 1x, img/ivan-ivanov@2x.jpg 2x" width="300" height="350px">
+                        </li>
+                        <li class="pros__slider-item slider__item">
+                            <b class="pros__name">Laris Vasileva</b>
+                            <p class="pros__profession">Expert-class dentist</p>
+                            <img class="pros__img" src="img/laresa-vaseleva.jpg" alt="Larisa Vasileva" class="slider-item__img" srcset="img/laresa-vaseleva.jpg 1x, img/laresa-vaseleva@2x.jpg 2x" width="300" height="350px">
+                        </li>
+                        <li class="pros__slider-item slider__item">
+                            <b class="pros__name">Laris Vasileva</b>
+                            <p class="pros__profession">Expert-class dentist</p>
+                            <img class="pros__img" src="img/laresa-vaseleva.jpg" alt="Larisa Vasileva" class="slider-item__img" srcset="img/laresa-vaseleva.jpg 1x, img/laresa-vaseleva@2x.jpg 2x" width="300" height="350px">
+                        </li>
+                    </ul>
+                    <div class="services__slider-buttons-wrapper">
+                        <button class="services__slider-button services__slider-button--prev"></button>
+                        <button class="services__slider-button services__slider-button--next"></button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

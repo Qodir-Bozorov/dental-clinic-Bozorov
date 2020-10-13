@@ -406,6 +406,14 @@ img {
   height: auto;
 }
 
+.diveder {
+  width: 50px;
+  height: 2px;
+  border: none;
+  background: none;
+  background-color: #FFD600;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -418,7 +426,7 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1180px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -427,7 +435,7 @@ img {
 
 .container--wide {
   position: relative;
-  max-width: 1920px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -450,7 +458,8 @@ img {
   text-decoration: none;
 }
 
-.intro-slider__button {
+.secondary-button {
+  padding: 17px;
   border: none;
   background: none;
   outline: none;
@@ -459,11 +468,11 @@ img {
   cursor: pointer;
 }
 
-.intro-slider__button:hover {
+.secondary-button:hover {
   opacity: 0.8;
 }
 
-.intro-slider__button:active {
+.secondary-button:active {
   opacity: 0.6;
 }
 
@@ -911,7 +920,6 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 900px;
   overflow: hidden;
 }
 
@@ -975,12 +983,16 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 1920px;
-  height: 900px;
+  height: auto;
   z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+}
+
+.intro-slider__buttons {
+  margin-bottom: 150px;
 }
 
 .intro-slider__item {
@@ -1002,6 +1014,10 @@ img {
   }
   .intro-slider__item {
     max-width: 1700px;
+    height: auto;
+  }
+  .intro-slider__buttons {
+    margin-bottom: 48px;
   }
 }
 
@@ -1024,6 +1040,9 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
+  .intro-slider__buttons {
+    margin-bottom: 0;
+  }
   .intro-slider__item {
     max-width: 1240px;
   }
@@ -1037,8 +1056,7 @@ img {
   .intro__txt-wrapper {
     margin-right: auto;
     margin-left: auto;
-    position: relative;
-    top: 320px;
+    margin-top: 320px;
     max-width: 100%;
     text-align: center;
     -webkit-box-align: center;
@@ -1051,5 +1069,697 @@ img {
   .intro__button {
     display: none;
   }
+}
+
+.appointmant__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 70px;
+}
+
+.appointment__shortest-informations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0;
+  margin: 0;
+}
+
+.shortinfo-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  max-width: 300px;
+  background-color: #FFD600;
+  border-radius: 5px;
+  padding: 40px 35px;
+  color: #272727;
+}
+
+.shortinfo-card::before {
+  margin-bottom: 18px;
+}
+
+.short-info__title {
+  width: 100%;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.short-info__description {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.appointment__shortinfo--first::before {
+  display: inline-block;
+  content: "";
+  width: 87px;
+  height: 87px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/tooth-with-parma.png);
+}
+
+.appointment__shortinfo--second {
+  background-color: #ffe040;
+}
+
+.appointment__shortinfo--second::before {
+  display: inline-block;
+  content: "";
+  width: 87px;
+  height: 87px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/prosthetics.png);
+}
+
+.appointmant__form {
+  max-width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-color: #0055B8;
+  color: #fff;
+  padding: 23px 33px;
+  margin-top: -66px;
+  border-radius: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.appointmant-form__heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 29px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #fff;
+}
+
+.input-txts {
+  max-width: 470px;
+  background: none;
+  border: none;
+  padding: 20px 15px;
+  border: 1px solid #fff;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.input-txts::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-txts:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-txts::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-txts::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form__submit-button {
+  margin: 0;
+  margin-bottom: 22px;
+  min-width: 230px;
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.checkbox-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkbox-title {
+  max-width: 256px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.checkbox-restyle {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.default-checkbox:checked + .checkbox-restyle {
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: center center;
+  background-image: url(../../img/check.svg);
+}
+
+@media only screen and (max-width: 1024px) {
+  .appointmant__container {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .shortinfo-card {
+    display: none;
+  }
+  .appointmant__form {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .appointmant__form {
+    margin-top: 10px;
+  }
+}
+
+.services__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #272727;
+  position: relative;
+}
+
+.services__txt-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+  text-align: center;
+  max-width: 544px;
+  background-image: url(../../img/dp-logo-highlight.png);
+  background-size: 275px 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.services__heading {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.slider__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  overflow-x: hidden;
+  max-width: 1030px;
+  padding: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.services-slider__item {
+  width: 200px;
+  -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-right: 35px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.slider__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 100%;
+  padding: 28px;
+  text-align: center;
+}
+
+.slider__card::before {
+  display: inline-block;
+  content: "";
+  width: 68px;
+  height: 68px;
+  margin-bottom: 13px;
+}
+
+.treatment::before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/tooth-with-parma-blue.png);
+}
+
+.hygiene::before {
+  width: 77px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/tooth-with-brush.png);
+}
+
+.diagnostics::before {
+  width: 66px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/tooth-in-magnifer.png);
+}
+
+.childrens-dentistry::before {
+  width: 73px;
+  height: 62px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/tooth-with-angel.png);
+}
+
+.slider__heading {
+  max-width: 95px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.slider-heading__divider {
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: #0055B8;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.slider__prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.old-price {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 3px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #00000040;
+}
+
+.current-price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0a60c3;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 45px;
+}
+
+.services__slider-buttons-wrapper {
+  z-index: 4;
+}
+
+.services__slider-button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: none;
+  background: none;
+  outline: none;
+  width: 42px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #0055B8;
+  border-radius: 5px;
+}
+
+.services__slider-button:hover {
+  opacity: 0.8;
+}
+
+.services__slider-button:active {
+  opacity: 0.6;
+}
+
+.services__slider-button:focus {
+  -webkit-box-shadow: 0 0 3px #0055B8;
+          box-shadow: 0 0 3px #0055B8;
+}
+
+.services__slider-button--prev {
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center center;
+  background-image: url(../../img/blue-arrow-left.svg);
+}
+
+.services__slider-button--next {
+  right: 0;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center center;
+  background-image: url(../../img/blue-arrow-right.svg);
+}
+
+.our-experts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.our-experts__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: -15%;
+  margin-right: 40px;
+}
+
+.our-experts__img {
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.our-experts__text-wrapper {
+  max-width: 580px;
+  color: #272727;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-size: 275px 100px;
+  background-position: top left;
+  background-image: url(../../img/dp-logo-highlight.png);
+}
+
+.our-experts__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 12px;
+}
+
+.our-experts__description {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.our-experts__work-steps-list,
+.our-experts__work-steps-list * {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.worksteps__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.worksteps__item::before {
+  display: inline-block;
+  content: "";
+  width: 62px;
+  height: 62px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.expert-class::before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/expert-man.png);
+}
+
+.modern-technology::before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/tooth-with-parma-blue.png);
+}
+
+.location::before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../img/loacation.png);
+}
+
+.workstep__heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+
+.workstep__title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4D4D4D;
+}
+
+@media only screen and (max-width: 900px) {
+  .our-experts__img {
+    margin-left: -20%;
+  }
+  .workstep__title {
+    display: none;
+  }
+  .worksteps__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.left {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 840px) {
+  .our-experts__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .our-experts__img {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .our-experts__text-wrapper {
+    margin: 0;
+    max-width: 100%;
+  }
+  .our-experts__work-steps-list {
+    text-align: center;
+    max-width: 265px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.pros__text-wrapper {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.pros__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.slider-wrapper {
+  overflow-x: hidden;
+}
+
+.slider__list {
+  overflow-x: hidden;
+}
+
+.pros__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-right: 52px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.pros__img {
+  margin-bottom: 15px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.pros__name {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+
+.pros__profession {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
 }
 /*# sourceMappingURL=main.css.map */

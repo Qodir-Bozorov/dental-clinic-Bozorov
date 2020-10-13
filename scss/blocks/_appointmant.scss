@@ -1,0 +1,157 @@
+.appointmant__container {
+ @include d-flex(row, start, start);
+ margin-bottom: 70px;
+}
+.appointment__shortest-informations {
+ @include d-flex(row, stretch, start);
+ padding: 0;
+ margin: 0;
+ // flex-wrap: wrap;
+}
+
+.shortinfo-card {
+ @include d-flex(column, center, start);
+ max-width: 300px;
+ background-color: $secondary-color;
+ border-radius: 5px;
+ padding: 40px 35px;
+ color: $text-color;
+ &::before {
+  margin-bottom: 18px;
+ }
+}
+
+.short-info__title {
+ width: 100%;
+ font-size: 18px;
+ line-height: 21px;
+ margin-bottom: 4px;
+ text-align: center;
+}
+
+.short-info__description {
+ padding: 0;
+ margin: 0;
+ font-weight: 300;
+ font-size: 18px;
+ line-height: 25px;
+}
+
+.appointment__shortinfo--first {
+ &::before {
+  display: inline-block;
+  content: "";
+  width: 87px;
+  height: 87px;
+  @include pseudo-bg(url(../../img/tooth-with-parma.png), cover, center, center);
+ }
+}
+
+.appointment__shortinfo--second {
+ background-color: #ffe040;
+ &::before {
+  display: inline-block;
+  content: "";
+  width: 87px;
+  height: 87px;
+  @include pseudo-bg(url(../../img/prosthetics.png), cover, center, center);
+ }
+}
+
+.appointmant__form {
+ max-width: 540px;
+ @include d-flex(column, start, start);
+ background-color: $main-color;
+ color: $white;
+ padding: 23px 33px;
+ margin-top: -66px;
+ border-radius: 5px;
+ flex-grow: 1;
+}
+
+.appointmant-form__heading {
+ margin: 0;
+ padding: 0;
+ margin-bottom: 29px;
+ font-weight: 500;
+ font-size: 36px;
+ line-height: 42px;
+ color: $white;
+}
+
+.input-txts {
+ max-width: 470px;
+ background: none;
+ border: none;
+ padding: 20px 15px;
+ border: 1px solid $white;
+ width: 100%;
+ border-radius: 5px;
+ font-weight: 300;
+ font-size: 14px;
+ line-height: 16px;
+ color: $white;
+ margin-bottom: 12px;
+ &::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+ }
+}
+
+.form__submit-button {
+ margin: 0;
+ margin-bottom: 22px;
+ min-width: 230px;
+ max-width: 100%;
+ font-size: 18px;
+ line-height: 21px;
+ text-align: center;
+}
+
+.checkbox-wrapper {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.checkbox-title {
+ max-width: 256px;
+ font-weight: 300;
+ font-size: 18px;
+ line-height: 21px;
+}
+
+.checkbox-restyle {
+ display: inline-block;
+ width: 35px;
+ height: 35px;
+ border: 1px solid $white;
+ border-radius: 5px;
+}
+
+.default-checkbox:checked + .checkbox-restyle {
+ @include pseudo-bg(url(../../img/check.svg), 25px 25px, center, center);
+}
+
+@include breakpoint-down(1024px) {
+ .appointmant__container {
+  padding: 0;
+  width: 100%;
+ }
+}
+
+@include breakpoint-down(970px) {
+ .shortinfo-card {
+  display: none;
+ }
+ .appointmant__form {
+  max-width: 550px;
+  margin: 0 auto;
+ }
+}
+
+@include breakpoint-down(600px) {
+ .appointmant__form {
+  margin-top: 10px;
+ }
+}

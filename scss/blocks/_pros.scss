@@ -1,0 +1,49 @@
+.pros__text-wrapper {
+ max-width: 900px;
+ margin-right: auto;
+ margin-left: auto;
+ text-align: center;
+ padding-top: 16px;
+}
+
+.pros__heading {
+ margin: 0;
+ padding: 0;
+ font-weight: 500;
+ font-size: 36px;
+ line-height: 42px;
+}
+
+.slider-wrapper {
+ overflow-x: hidden;
+}
+.slider__list {
+ overflow-x: hidden;
+}
+.pros__slider-item {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ margin-right: 52px;
+ flex-shrink: 0;
+}
+
+.pros__img {
+ margin-bottom: 15px;
+ order: -1;
+}
+.pros__name {
+ margin: 0;
+ padding: 0;
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 21px;
+ margin-bottom: 5px;
+}
+.pros__profession {
+ margin: 0;
+ padding: 0;
+ font-weight: 300;
+ font-size: 18px;
+ line-height: 21px;
+}
