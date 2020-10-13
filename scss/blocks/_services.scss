@@ -158,3 +158,9 @@
  right: 0;
  @include pseudo-bg(url(../../img/blue-arrow-right.svg), 30px 30px, center, center); 
 }
+
+@include breakpoint-down(900px) {
+ .services__slider-button {
+  display: none;
+ }
+}

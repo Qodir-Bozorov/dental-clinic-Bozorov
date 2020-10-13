@@ -2,6 +2,7 @@ const hamburger = document.querySelector(".navlist__toggler");
 const navmenu = document.querySelector(".nav-list");
 // const body = document.querySelector(".site-main");
 
+navmenu.classList.remove("nojs");
 
 hamburger.addEventListener("click", () => {
  // navmenu.classList.toggle("open");

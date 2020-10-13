@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body id="body" class="container--wide">
+<body id="body">
+    <h1 class="visually-hidden">Site of Dental clinic</h1>
     <header class="site-header">
         <div class="container site-header__container">
             <a href="tel:990545606" class="site-header__phone-us">
@@ -27,7 +28,7 @@
                 <div class="sitenav__content-wrapper">
                     <a href="index.html" class="sitenav__logo-link"><img src="img/title-logo.svg" alt="Logo dp"
                             class="sitenav__logo-img" width="140" height="21"></a>
-                    <ul class="sitenav__list nav-list">
+                    <ul class="sitenav__list nav-list NOJ">
                         <li class="nav__item"><a href="#services" class="nav__item-link">Services</a></li>
                         <li class="nav__item"><a href="#advantages" class="nav__item-link">Advantages</a></li>
                         <li class="nav__item"><a href="#team" class="nav__item-link">Team</a></li>
@@ -54,7 +55,7 @@
         </nav>
     </header>
     <main class="site-main">
-        <section class="intro">
+        <section class="intro container--wide">
             <div class="container intro__container">
                 <div class="intro__txt-wrapper">
                     <h2 class="intro__heading">get a brilliant smile for every day</h2>
@@ -85,7 +86,7 @@
                 </ul>
             </div>
         </section>
-        <section class="appointment">
+        <section class="appointment container--wide">
             <div class="container appointmant__container">
                 <div class="appointment__shortest-informations">
                     <div class="appointment__shortinfo--first shortinfo-card">
@@ -104,7 +105,7 @@
                     <input type="text" name="username" id="userName" class="form__username input-txts"
                         placeholder="Name" required>
                     <input type="email" name="usermail" id="userMail" class="form__usermail input-txts"
-                        placeholder="Email" required>
+                        placeholder="Email" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
                     <button type="submit" aria-label="submit answer"
                         class="form__submit-button secondary-button">Appointment</button>
                     <label class="checkbox-wrapper">
@@ -117,10 +118,10 @@
             </div>
         </section>
 
-        <section class="services">
-            <!-- ----------------------- -->
+        <section class="services container--wide">
+            <!--divider-->
             <hr class="diveder">
-            <!-- ----------------------- -->
+            <!--divider-->
             <div class="container services__container">
                 <div class="services__txt-wrapper">
                     <h2 class="services__heading section-heading">Services</h2>
@@ -130,7 +131,7 @@
                 <div class="services__slider-wrapper slider-wrapper">
                     <ul class="services-slider__list slider__list">
                         <li class="services-slider__item">
-                            <div href="#" class="slider__card treatment">
+                            <div class="slider__card treatment">
                                 <h4 class="slider__heading">Dental treatment</h4>
                                 <span class="slider-heading__divider"></span>
                                 <span class="slider__prices">
@@ -140,7 +141,7 @@
                             </div>
                         </li>
                         <li class="services-slider__item">
-                            <div href="#" class="slider__card hygiene">
+                            <div class="slider__card hygiene">
                                 <h4 class="slider__heading">Hygiene</h4>
                                 <span class="slider-heading__divider"></span>
                                 <span class="slider__prices">
@@ -150,7 +151,7 @@
                             </div>
                         </li>
                         <li class="services-slider__item">
-                            <div href="#" class="slider__card diagnostics">
+                            <div class="slider__card diagnostics">
                                 <h4 class="slider__heading">Diagnostics</h4>
                                 <span class="slider-heading__divider"></span>
                                 <span class="slider__prices">
@@ -160,7 +161,7 @@
                             </div>
                         </li>
                         <li class="services-slider__item">
-                            <div href="#" class="slider__card childrens-dentistry">
+                            <div class="slider__card childrens-dentistry">
                                 <h4 class="slider__heading">Children’s dentistry</h4>
                                 <span class="slider-heading__divider"></span>
                                 <span class="slider__prices">
@@ -170,7 +171,7 @@
                             </div>
                         </li>
                         <li class="services-slider__item">
-                            <div href="#" class="slider__card hygiene">
+                            <div class="slider__card hygiene">
                                 <h4 class="slider__heading">Hygiene</h4>
                                 <span class="slider-heading__divider"></span>
                                 <span class="slider__prices">
@@ -187,9 +188,10 @@
                 </div>
             </div>
         </section>
-        <section class="our-experts">
+        <section class="our-experts container--wide">
             <div class="container our-experts__container">
-                    <img src="img/doctor-with-girl-see-prosthetics.jpg" class="our-experts__img" alt="doctor with girl see prosthetics" width="641" height="110">
+                <img src="img/doctor-with-girl-see-prosthetics.jpg" class="our-experts__img"
+                    alt="doctor with girl see prosthetics" width="641" height="110">
                 <div class="our-experts__text-wrapper">
                     <hr class="diveder left">
                     <h3 class="our-experts__heading">Modern technology and
@@ -231,13 +233,15 @@
                         </li>
                     </ol>
                 </div>
+            </div>
         </section>
         <hr class="diveder">
-        <section class="pros">
+        <section class="pros container--wide">
             <div class="container pros__container">
                 <div class="pros__text-wrapper">
                     <h3 class="pros__heading">Professional team</h3>
-                    <p class="pros__title">Dental Practice employs orthodontists and orthopedists, surgeons and therapists, as well as children's dentists.
+                    <p class="pros__title">Dental Practice employs orthodontists and orthopedists, surgeons and
+                        therapists, as well as children's dentists.
                         All 13 dentists of our center are highly qualified specialists with extensive experience.</p>
                 </div>
                 <div class="pros__slider-wrapper slider-wrapper">
@@ -245,22 +249,29 @@
                         <li class="pros__slider-item slider__item">
                             <b class="pros__name">Anna Petrova</b>
                             <p class="pros__profession">Expert-class dentist</p>
-                            <img class="pros__img" src="img/anna-petrova.jpg" alt="Anna Petrova" class="slider-item__img" srcset="img/anna-petrova.jpg 1x, img/anna-petrova@2x.jpg 2x" width="300" height="350px">
+                            <img class="pros__img slider-item__img" src="img/anna-petrova.jpg" alt="Anna Petrova"
+                                srcset="img/anna-petrova.jpg 1x, img/anna-petrova@2x.jpg 2x"
+                                width="300" height="350">
                         </li>
                         <li class="pros__slider-item slider__item">
                             <b class="pros__name">Ivan Ivanov</b>
                             <p class="pros__profession">Expert-class dentist</p>
-                            <img class="pros__img" src="img/ivan-ivanov.jpg" alt="Ivan Ivanov" class="slider-item__img" srcset="img/ivan-ivanov.jpg 1x, img/ivan-ivanov@2x.jpg 2x" width="300" height="350px">
+                            <img class="pros__img slider-item__img" src="img/ivan-ivanov.jpg" alt="Ivan Ivanov"
+                                srcset="img/ivan-ivanov.jpg 1x, img/ivan-ivanov@2x.jpg 2x" width="300" height="350">
                         </li>
                         <li class="pros__slider-item slider__item">
                             <b class="pros__name">Laris Vasileva</b>
                             <p class="pros__profession">Expert-class dentist</p>
-                            <img class="pros__img" src="img/laresa-vaseleva.jpg" alt="Larisa Vasileva" class="slider-item__img" srcset="img/laresa-vaseleva.jpg 1x, img/laresa-vaseleva@2x.jpg 2x" width="300" height="350px">
+                            <img class="pros__img slider-item__img" src="img/laresa-vaseleva.jpg" alt="Larisa Vasileva"
+                                srcset="img/laresa-vaseleva.jpg 1x, img/laresa-vaseleva@2x.jpg 2x" width="300"
+                                height="350">
                         </li>
                         <li class="pros__slider-item slider__item">
                             <b class="pros__name">Laris Vasileva</b>
                             <p class="pros__profession">Expert-class dentist</p>
-                            <img class="pros__img" src="img/laresa-vaseleva.jpg" alt="Larisa Vasileva" class="slider-item__img" srcset="img/laresa-vaseleva.jpg 1x, img/laresa-vaseleva@2x.jpg 2x" width="300" height="350px">
+                            <img class="pros__img slider-item__img" src="img/laresa-vaseleva.jpg" alt="Larisa Vasileva"
+                                srcset="img/laresa-vaseleva.jpg 1x, img/laresa-vaseleva@2x.jpg 2x" width="300"
+                                height="350">
                         </li>
                     </ul>
                     <div class="services__slider-buttons-wrapper">
@@ -269,6 +280,104 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="quality-service container--wide">
+            <div class="container quality-service__container">
+                <div class="quality-service__text-wrappper">
+                    <hr class="right diveder">
+                    <h3 class="quality-service__heading">We are confident in the quality of our services</h3>
+                    <ul class="quality-service__description">
+                        <li>About 50 thousand patients opted for the Dental Practice dental center.</li>
+                        <li>People come to us as a family, because trust and comfort are important for the health of
+                            loved ones. And we provide this:</li>
+                        <li>- You do not need to go anywhere else - the center provides the whole range of dental
+                            services - treatment and diagnosis, as well as prevention.</li>
+                        <li>- We have reasonable prices. You pay for quality. And you will be offered different
+                            opportunities.</li>
+                        <li>- We also do not pursue cheapness. This is our reasonable choice - only good materials
+                            should be used in the treatment, and professionals should deal with it.</li>
+                        <li>- For regular customers discounts from 5 to 20%.</li>
+                    </ul>
+                    <div class="wrapper">
+                        <img src="img/scripted.png" class="scripted" alt="Signature"
+                            srcset="img/scripted.png 1x, img/scripted@2.png 2x">
+                        <a href="#" class="primary-button quality-service__button">Learn more</a>
+                    </div>
+                </div>
+                <img class="quality-service__img" src="img/doctor-clapt-with-girl.jpg" alt="doctor clapt with girl"
+                    width="750" height="600"
+                    srcset="img/doctor-clapt-with-girl.jpg 1x, img/doctor-clapt-with-girl@2x.jpg 2x">
+            </div>
+        </section>
+        <section class="customers">
+            <hr class="diveder customer__divider">
+            <div class="container customers__container">
+                <div class="customer__text-wrapper">
+                    <h2 class="customer__heading">Reviews from our patients</h2>
+                    <p class="customer__title">Here are the latest reviews from our regular customers.
+                        You can also leave your review by clicking on the link below</p>
+                </div>
+                <ul class="customer-cards__list">
+                    <li class="customer__card">
+                        <h5 class="customer__name">Ivanov Ivan</h5>
+                        <p class="customer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation.</p>
+                        <img src="img/ivanov-ivan.jpg" alt="Ivanov Ivan customer" class="customer__img" width="355"
+                            height="240">
+                    </li>
+                    <li class="customer__card">
+                        <h5 class="customer__name">Ivanov Ivan</h5>
+                        <p class="customer__description">Lorem lorem22 ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation.</p>
+                        <img src="img/ivanov-ivan.jpg" alt="Ivanov Ivan customer" class="customer__img" width="355"
+                            height="240">
+                    </li>
+                    <li class="customer__card">
+                        <h5 class="customer__name">Ivanov Ivan</h5>
+                        <p class="customer__description">Lorem lorem22 ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation.</p>
+                        <img src="img/ivanov-ivan.jpg" alt="Ivanov Ivan customer" class="customer__img" width="355"
+                            height="240">
+                    </li>
+                </ul>
+                <a href="#" class="customer__feedback-button outline-button">Get feedback</a>
+            </div>
+        </section>
+        <hr class="diveder">
+        <section class="location">
+            <div class="container location__container">
+                <div class="location__text-wrapper">
+                    <h2 class="location__heading">Convenient location and working hours</h2>
+                    <p class="location__description">Our clinic is located in the center of the Sverdlovsk district, at
+                        the address: Raboche-Krestyanskaya Street 6. From the bus stop “Family” hypermarket to our
+                        dental clinic - 5 minutes on foot.</p>
+                </div>
+            </div>
+            <div class="location__form-map container--wide">
+                <div class="container">
+                    <form action="https://echo.htmlacademy.ru" class="appointmant__form form__mapper" method="POST">
+                        <h4 class="appointmant-form__heading">Appointment</h4>
+                        <input type="text" name="username" id="username" class="form__username input-txts"
+                            placeholder="Name" required>
+                        <input type="email" name="usermail" id="usermail" class="form__usermail input-txts"
+                            placeholder="Email" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
+                        <button type="submit" aria-label="submit answer"
+                            class="form__submit-button secondary-button">Appointment</button>
+                        <label class="checkbox-wrapper">
+                            <small class="checkbox-title">I give my consent to the storage and processing of personal
+                                data</small>
+                            <input type="checkbox" name="personal-data" class="default-checkbox visually-hidden">
+                            <span class="checkbox-restyle"></span>
+                        </label>
+                    </form>
+                    <a href="https://www.google.com/maps/search/google+map/@41.3339858,69.2447879,13z/data=!3m1!4b1?hl=uz"
+                        class="location__map-link">ddd</a>
+                </div>
+            </div>
+
         </section>
     </main>
     <script src="js/main.js"></script>

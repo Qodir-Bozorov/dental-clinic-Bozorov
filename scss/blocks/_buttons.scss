@@ -8,6 +8,13 @@
  font-size: 18px;
  line-height: 21px;
  text-transform: uppercase;
+ transition: $main-smoothing;
+ &:hover {
+  opacity: 0.8;
+ }
+ &:active {
+  opacity: 0.6;
+ }
 }
 
 .secondary-button {
@@ -20,6 +27,22 @@
  cursor: pointer;
  &:hover {
   opacity: 0.8;
+ }
+ &:active {
+  opacity: 0.6;
+ }
+}
+
+.outline-button {
+ @include restyle-link($text-color, none, #FFF, none);
+ border-radius: 5px;
+ padding: 24px 50px;
+ min-width: 260px;
+ border: 2px solid #0055B8;
+ text-align: center;
+ transition: $main-smoothing;
+ &:hover {
+  background-color: $main-color;
  }
  &:active {
   opacity: 0.6;
